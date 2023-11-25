@@ -39,7 +39,7 @@ public class DBWeekData {
                 weekData = Config.getWeekDataFromRowArray(rows);
                 weekDatas.add(weekData);
             }
-            weekDatas.forEach(System.out::println);
+            
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

@@ -14,4 +14,5 @@ public class MemberPortfolio {
     private final String motivationApplication;
     private final String gpa;
     private final String dream;
+    private final Integer memberId;
 }

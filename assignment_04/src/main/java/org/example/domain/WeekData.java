@@ -15,4 +15,6 @@ public class WeekData {
     private final Boolean wednesday;
     private final Boolean thursday;
     private final Boolean friday;
+    private final Integer managementId;
+    private final Integer memberId;
 }

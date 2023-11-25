@@ -15,4 +15,5 @@ public class AttendanceStatus {
     private final String status;
     private final String attendanceTime;
     private final String attendanceDate;
+    private final Integer memberId;
 }

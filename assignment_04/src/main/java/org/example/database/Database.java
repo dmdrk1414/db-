@@ -2,6 +2,7 @@ package org.example.database;
 
 import lombok.Getter;
 import org.example.domain.AttendanceStatus;
+import org.example.domain.Management;
 
 import java.sql.Statement;
 import java.util.List;
@@ -16,5 +17,9 @@ public class Database {
 
     public List<AttendanceStatus> findAllAttendanceStatus() {
         return new DBAttendanceStatus(dbStatement).findAll();
+    }
+
+    public List<Management> findAllManagement() {
+        return new DBManagement(dbStatement).findAll();
     }
 }

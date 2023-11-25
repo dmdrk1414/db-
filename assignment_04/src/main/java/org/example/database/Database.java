@@ -38,7 +38,7 @@ public class Database {
         return new DBTimeTable(dbStatement).findAll();
     }
 
-    public List<WeekData> findAllWddkData() {
+    public List<WeekData> findAllWeekData() {
         return new DBWeekData(dbStatement).findAll();
     }
 }

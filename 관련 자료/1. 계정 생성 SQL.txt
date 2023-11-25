@@ -1,0 +1,41 @@
+=========================================================================
+SQL*Plus: Release 21.0.0.0.0 - Production on 토 11월 25 13:23:48 2023
+Version 21.3.0.0.0
+
+Copyright (c) 1982, 2021, Oracle.  All rights reserved.
+
+사용자명 입력: system
+비밀번호 입력:
+마지막 성공한 로그인 시간: 목 9월  14 2023 23:31:42 +09:00
+
+다음에 접속됨:
+Oracle Database 21c Enterprise Edition Release 21.0.0.0.0 - Production
+Version 21.3.0.0.0
+
+-> 
+id: system
+password: Chosunapp7 
+접속
+
+=========================================================================
+SQL : 
+CREATE USER C##assignment4 identified by 1234;
+GRANT DBA TO C##assignment4;
+
+결과 :
+-- CREATE USER C##assignment4 identified by 1234;
+-- GRANT DBA TO C##assignment4;
+SQL> CREATE USER C##assignment4 identified by 1234;
+
+사용자가 생성되었습니다.
+
+SQL> GRANT DBA TO C##assignment4;
+
+권한이 부여되었습니다.
+
+설명 : 
+ID : C##assignment4
+PASSWORD : 1234
+DBA의 권한을 부여하였다.
+
+=========================================================================

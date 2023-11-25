@@ -63,4 +63,24 @@ public class Config {
                 .memberId(Integer.valueOf(rows.get(3)))
                 .build();
     }
+
+    public static WeekData getWeekDataFromRowArray(List<String> rows) {
+        return WeekData.builder()
+                .monday(isTrue(rows.get(0)))
+                .tuesday(isTrue(rows.get(1)))
+                .wednesday(isTrue(rows.get(2)))
+                .thursday(isTrue(rows.get(3)))
+                .friday(isTrue(rows.get(4)))
+                .managementId(Integer.valueOf(rows.get(5)))
+                .memberId(Integer.valueOf(rows.get(6)))
+                .build();
+    }
+
+    private static Boolean isTrue(String numStr) {
+        Integer num = Integer.valueOf(numStr);
+        if (num == 1) {
+            return true;
+        }
+        return false;
+    }
 }

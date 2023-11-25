@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5d29e654-f4e0-4a45-aaae-6062602ef459" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/ojdbc11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment_04.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/관련 자료/1. 계정 생성 SQL.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/관련 자료/2. 테이블 생성 SQL.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/관련 자료/3. insert SQL.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/관련 자료/hw4_최종과제보고서_/hw4_최종과제보고서_.hwp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/관련 자료/hw4_최종과제보고서_/hw4_최종과제보고서_예시.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/관련 자료/hw4_최종과제보고서_/테이블 생성.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/관련 자료/sql.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/관련 자료/과제 4 논리적 설계.erwin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/관련 자료/과제 4 물리적 설계.erwin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/관련 자료/보고서.hwp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/관련 자료/테이블 생성.pdf" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 4
+}]]></component>
+  <component name="ProjectId" id="2Yf3QhkyCWKZrCv2Rxyz87OwDEk" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5d29e654-f4e0-4a45-aaae-6062602ef459" name="Changes" comment="" />
+      <created>1700902793356</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1700902793356</updated>
+      <workItem from="1700902795504" duration="48000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

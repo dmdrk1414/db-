@@ -2,6 +2,7 @@ package org.example.config;
 
 import org.example.domain.AttendanceStatus;
 import org.example.domain.Management;
+import org.example.domain.Member;
 
 import java.util.List;
 
@@ -22,6 +23,17 @@ public class Config {
                 .date(rows.get(1))
                 .vacationCount(Integer.valueOf(rows.get(2)))
                 .memberId(Integer.valueOf(rows.get(3)))
+                .build();
+    }
+
+    public static Member getMemberFromRowArray(List<String> rows) {
+        return Member.builder()
+                .id(Integer.valueOf(rows.get(0)))
+                .name(rows.get(1))
+                .email(rows.get(2))
+                .password(rows.get(3))
+                .grade(rows.get(4))
+                .phonNumber(rows.get(5))
                 .build();
     }
 }

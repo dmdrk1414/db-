@@ -3,6 +3,7 @@ package org.example.database;
 import lombok.Getter;
 import org.example.domain.AttendanceStatus;
 import org.example.domain.Management;
+import org.example.domain.Member;
 
 import java.sql.Statement;
 import java.util.List;
@@ -21,5 +22,9 @@ public class Database {
 
     public List<Management> findAllManagement() {
         return new DBManagement(dbStatement).findAll();
+    }
+
+    public List<Member> findAllMember() {
+        return new DBMember(dbStatement).findAll();
     }
 }

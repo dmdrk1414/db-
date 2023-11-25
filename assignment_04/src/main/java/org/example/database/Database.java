@@ -1,10 +1,7 @@
 package org.example.database;
 
 import lombok.Getter;
-import org.example.domain.AttendanceStatus;
-import org.example.domain.Management;
-import org.example.domain.Member;
-import org.example.domain.MemberPortfolio;
+import org.example.domain.*;
 
 import java.sql.Statement;
 import java.util.List;
@@ -31,5 +28,9 @@ public class Database {
 
     public List<MemberPortfolio> findAllMemberPortfolio() {
         return new DBMemberPortfolio(dbStatement).findAll();
+    }
+
+    public List<Post> findAllPost() {
+        return new DBPost(dbStatement).findAll();
     }
 }

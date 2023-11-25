@@ -1,9 +1,6 @@
 package org.example.config;
 
-import org.example.domain.AttendanceStatus;
-import org.example.domain.Management;
-import org.example.domain.Member;
-import org.example.domain.MemberPortfolio;
+import org.example.domain.*;
 
 import java.util.List;
 
@@ -44,6 +41,16 @@ public class Config {
                 .motivationApplication(rows.get(1))
                 .gpa(rows.get(2))
                 .dream(rows.get(3))
+                .memberId(Integer.valueOf(rows.get(4)))
+                .build();
+    }
+
+    public static Post getPostFromRowArray(List<String> rows) {
+        return Post.builder()
+                .id(Integer.valueOf(rows.get(0)))
+                .title(rows.get(1))
+                .content(rows.get(2))
+                .postDate(rows.get(3))
                 .memberId(Integer.valueOf(rows.get(4)))
                 .build();
     }

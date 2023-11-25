@@ -1,5 +1,6 @@
 package org.example.domain;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
@@ -7,6 +8,7 @@ import lombok.Setter;
 @Builder
 @Getter
 @Setter
+@AllArgsConstructor
 public class Member {
     private final Integer id;
     private final String name;
@@ -14,13 +16,4 @@ public class Member {
     private final String password;
     private final String grade;
     private final String phonNumber;
-
-    public Member(Integer id, String name, String email, String password, String grade, String phonNumber) {
-        this.id = id;
-        this.name = name;
-        this.email = email;
-        this.password = password;
-        this.grade = grade;
-        this.phonNumber = phonNumber;
-    }
 }

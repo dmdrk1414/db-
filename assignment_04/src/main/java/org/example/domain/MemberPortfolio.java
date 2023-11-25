@@ -1,14 +1,13 @@
 package org.example.domain;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 @Builder
 @Getter
 @Setter
 @AllArgsConstructor
+@ToString
+
 public class MemberPortfolio {
     private final Integer id;
     private final String motivationApplication;

@@ -6,6 +6,8 @@ import lombok.*;
 @Getter
 @Setter
 @AllArgsConstructor
+@ToString
+
 public class TimeTable {
     private final Integer id;
     private final String image;

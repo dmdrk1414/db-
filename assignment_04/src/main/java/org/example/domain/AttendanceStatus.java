@@ -1,15 +1,13 @@
 package org.example.domain;
 
 import com.sun.jdi.IntegerType;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 @Builder
 @Getter
 @Setter
 @AllArgsConstructor
+@ToString
 public class AttendanceStatus {
     private final Integer id;
     private final String status;

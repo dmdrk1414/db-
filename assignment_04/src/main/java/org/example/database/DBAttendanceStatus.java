@@ -33,7 +33,7 @@ public class DBAttendanceStatus {
                     rows.add(resultSet.getString(i));
                 }
 
-                attendanceStatus = Config.getAttendanceStatus(rows);
+                attendanceStatus = Config.getAttendanceStatusFromRowArray(rows);
                 attendanceStatuses.add(attendanceStatus);
             }
         } catch (SQLException e) {
@@ -42,6 +42,4 @@ public class DBAttendanceStatus {
 
         return attendanceStatuses;
     }
-
-
 }

@@ -5,7 +5,7 @@ import org.example.domain.AttendanceStatus;
 import java.util.List;
 
 public class Config {
-    public static AttendanceStatus getAttendanceStatus(List<String> rows) {
+    public static AttendanceStatus getAttendanceStatusFromRowArray(List<String> rows) {
         AttendanceStatus attendanceStatus;
         attendanceStatus = AttendanceStatus.builder()
                 .id(Integer.valueOf(rows.get(0)))

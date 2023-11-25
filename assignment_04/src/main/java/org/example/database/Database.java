@@ -4,6 +4,7 @@ import lombok.Getter;
 import org.example.domain.AttendanceStatus;
 import org.example.domain.Management;
 import org.example.domain.Member;
+import org.example.domain.MemberPortfolio;
 
 import java.sql.Statement;
 import java.util.List;
@@ -26,5 +27,9 @@ public class Database {
 
     public List<Member> findAllMember() {
         return new DBMember(dbStatement).findAll();
+    }
+
+    public List<MemberPortfolio> findAllMemberPortfolio() {
+        return new DBMemberPortfolio(dbStatement).findAll();
     }
 }

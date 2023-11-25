@@ -33,4 +33,8 @@ public class Database {
     public List<Post> findAllPost() {
         return new DBPost(dbStatement).findAll();
     }
+
+    public List<TimeTable> findAllTimeTable() {
+        return new DBTimeTable(dbStatement).findAll();
+    }
 }

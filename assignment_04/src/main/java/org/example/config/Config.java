@@ -54,4 +54,13 @@ public class Config {
                 .memberId(Integer.valueOf(rows.get(4)))
                 .build();
     }
+
+    public static TimeTable getTimeTableFromRowArray(List<String> rows) {
+        return TimeTable.builder()
+                .id(Integer.valueOf(rows.get(0)))
+                .image(rows.get(1))
+                .applyDate(rows.get(2))
+                .memberId(Integer.valueOf(rows.get(3)))
+                .build();
+    }
 }

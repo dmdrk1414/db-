@@ -15,4 +15,12 @@ public class Member {
     private final String password;
     private final String grade;
     private final String phonNumber;
+
+    public boolean is(String email, String password) {
+        return hasMember(email, password);
+    }
+
+    private boolean hasMember(String email, String password) {
+        return this.email.equals(email) && this.password.equals(password);
+    }
 }

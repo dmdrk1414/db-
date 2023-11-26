@@ -43,7 +43,7 @@ public class Database {
     }
 
     public List<WeekData> findAllWeekData() {
-        return new DBWeekData(dbStatement).findAll();
+        return new DBWeekData(dbStatement, connection).findAll();
     }
 
     public Boolean saveMember(Application application) {
@@ -64,5 +64,9 @@ public class Database {
 
     public boolean updateAttendanceStatus(Integer id) {
         return new DBAttendanceStatus(dbStatement, connection).updateAttendanceStatus(id);
+    }
+
+    public Boolean updateWeekDate(Integer memberId) {
+        return new DBWeekData(dbStatement, connection).updateWeekDate(memberId);
     }
 }

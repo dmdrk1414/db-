@@ -15,4 +15,8 @@ public class WeekDataRepository {
     public List<WeekData> findAll() {
         return database.findAllWeekData();
     }
+
+    public Boolean updateWeekDate(Integer memberId) {
+        return database.updateWeekDate(memberId);
+    }
 }

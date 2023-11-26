@@ -11,6 +11,7 @@ public class DBConnection {
     private static final String ORACLE_DATABASE_ID = "C##assignment4";
     private static final String ORACLE_DATABASE_PASSWORD = "1234";
     private Statement statement; // Statement 객체
+    private Connection connection;
 
     // DBConnectionTest 생성자
     public DBConnection() {
@@ -19,7 +20,7 @@ public class DBConnection {
             Class.forName("oracle.jdbc.OracleDriver");
             // 데이터베이스 연결
             // Connection 객체
-            Connection connection = DriverManager.getConnection(ORACLE_JDBC_URL, ORACLE_DATABASE_ID, ORACLE_DATABASE_PASSWORD);
+            connection = DriverManager.getConnection(ORACLE_JDBC_URL, ORACLE_DATABASE_ID, ORACLE_DATABASE_PASSWORD);
 
             statement = connection.createStatement(); // Statement 객체 생성
         } catch (ClassNotFoundException e) {

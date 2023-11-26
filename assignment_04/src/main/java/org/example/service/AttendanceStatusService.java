@@ -1,5 +1,6 @@
 package org.example.service;
 
+import org.example.domain.Application;
 import org.example.entity.AttendanceStatus;
 import org.example.repository.AttendanceStatusRepository;
 
@@ -14,5 +15,9 @@ public class AttendanceStatusService {
 
     public List<AttendanceStatus> findAll() {
         return attendanceStatusRepository.findAll();
+    }
+
+    public boolean save(Application application) {
+        return attendanceStatusRepository.save(application);
     }
 }

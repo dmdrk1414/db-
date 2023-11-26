@@ -1,5 +1,6 @@
 package org.example.service;
 
+import org.example.domain.Application;
 import org.example.entity.MemberPortfolio;
 import org.example.repository.MemberPortFolioRepository;
 
@@ -14,5 +15,9 @@ public class MemberPortFolioService {
 
     public List<MemberPortfolio> findAll() {
         return memberPortFolioRepository.findAll();
+    }
+
+    public Boolean save(Application application) {
+        return memberPortFolioRepository.save(application);
     }
 }

@@ -1,6 +1,7 @@
 package org.example.repository;
 
 import org.example.database.Database;
+import org.example.domain.Application;
 import org.example.entity.MemberPortfolio;
 
 import java.util.List;
@@ -14,5 +15,9 @@ public class MemberPortFolioRepository {
 
     public List<MemberPortfolio> findAll() {
         return database.findAllMemberPortfolio();
+    }
+
+    public Boolean save(Application application) {
+        return database.saveMemberPortFolio(application);
     }
 }

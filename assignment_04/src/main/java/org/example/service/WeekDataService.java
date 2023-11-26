@@ -1,4 +1,18 @@
 package org.example.service;
 
+import org.example.domain.WeekData;
+import org.example.repository.WeekDataRepository;
+
+import java.util.List;
+
 public class WeekDataService {
+    private final WeekDataRepository weekDataRepository;
+
+    public WeekDataService() {
+        this.weekDataRepository = new WeekDataRepository();
+    }
+
+    public List<WeekData> findAll() {
+        return weekDataRepository.findAll();
+    }
 }

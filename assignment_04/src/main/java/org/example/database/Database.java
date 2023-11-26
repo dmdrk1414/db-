@@ -61,4 +61,8 @@ public class Database {
     public boolean saveAttendanceStatus(Application application) {
         return new DBAttendanceStatus(dbStatement, connection).save(application);
     }
+
+    public boolean updateAttendanceStatus(Integer id) {
+        return new DBAttendanceStatus(dbStatement, connection).updateAttendanceStatus(id);
+    }
 }

@@ -20,4 +20,8 @@ public class AttendanceStatusRepository {
     public boolean save(Application application) {
         return database.saveAttendanceStatus(application);
     }
+
+    public boolean updateAttendanceStatus(Integer id) {
+        return database.updateAttendanceStatus(id);
+    }
 }

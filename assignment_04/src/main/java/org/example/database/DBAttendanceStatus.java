@@ -5,6 +5,7 @@ import org.example.constant.ConstantAttendanceState;
 import org.example.constant.RowCount;
 import org.example.domain.Application;
 import org.example.entity.AttendanceStatus;
+import org.example.entity.Member;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -88,5 +89,61 @@ public class DBAttendanceStatus {
         }
 
         return null;
+    }
+
+    public Boolean updateAttendanceStatus(Integer id) {
+        String sql = "UPDATE attendance_status SET status = ? WHERE member_id = " + id;
+
+        try (
+                PreparedStatement preparedStatement = connection.prepareStatement(sql)
+        ) {
+            if (isAllReadAttendance(id)) {
+                return false;
+            }
+
+            preparedStatement.setString(1, ConstantAttendanceState.ATTENDANCE.getState());
+            preparedStatement.executeUpdate();
+
+            return true;
+        } catch (SQLException e) {
+            throw new RuntimeException("Failed to retrieve member by email", e);
+        }
+    }
+
+    public AttendanceStatus findByMemberId(Integer memberId) {
+        AttendanceStatus attendanceStatus = null;
+        String sql = "SELECT * FROM attendance_status WHERE id = ?";
+
+        try (
+                PreparedStatement preparedStatement = connection.prepareStatement(sql)
+        ) {
+            preparedStatement.setString(1, String.valueOf(memberId));
+
+            try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                if (resultSet.next()) {
+                    // ResultSet에서 데이터를 읽어와 Member 객체를 생성하거나 반환 로직 추가
+                    attendanceStatus = AttendanceStatus.builder()
+                            .id(resultSet.getInt("id"))
+                            .status(resultSet.getString("status"))
+                            .attendanceTime(resultSet.getString("attendance_time"))
+                            .attendanceDate(resultSet.getString("attendance_date"))
+                            .memberId(resultSet.getInt("member_id"))
+                            .build();
+                }
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException("Failed to retrieve member by email", e);
+        }
+
+        return attendanceStatus;
+    }
+
+    private boolean isAllReadAttendance(Integer id) {
+        AttendanceStatus attendanceStatus = findByMemberId(id);
+        String status = attendanceStatus.getStatus();
+
+        return status.equals(ConstantAttendanceState.ATTENDANCE.getState()) ||
+                status.equals(ConstantAttendanceState.ABSENCE.getState()) ||
+                status.equals(ConstantAttendanceState.VACATION.getState());
     }
 }

@@ -1,5 +1,6 @@
 package org.example.service;
 
+import org.example.dto.request.SavePostRequest;
 import org.example.entity.Post;
 import org.example.repository.PostRepository;
 
@@ -14,5 +15,9 @@ public class PostService {
 
     public List<Post> findAll() {
         return postRepository.findAll();
+    }
+
+    public boolean save(SavePostRequest savePostRequest) {
+        return postRepository.save(savePostRequest);
     }
 }

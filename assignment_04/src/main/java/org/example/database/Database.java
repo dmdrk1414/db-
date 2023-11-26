@@ -2,6 +2,7 @@ package org.example.database;
 
 import lombok.Getter;
 import org.example.domain.Application;
+import org.example.dto.request.SavePostRequest;
 import org.example.entity.*;
 
 import java.sql.Connection;
@@ -35,7 +36,7 @@ public class Database {
     }
 
     public List<Post> findAllPost() {
-        return new DBPost(dbStatement).findAll();
+        return new DBPost(dbStatement, connection).findAll();
     }
 
     public List<TimeTable> findAllTimeTable() {
@@ -68,5 +69,9 @@ public class Database {
 
     public Boolean updateWeekDate(Integer memberId) {
         return new DBWeekData(dbStatement, connection).updateWeekDate(memberId);
+    }
+
+    public boolean savePost(SavePostRequest savePostRequest) {
+        return new DBPost(dbStatement, connection).save(savePostRequest);
     }
 }

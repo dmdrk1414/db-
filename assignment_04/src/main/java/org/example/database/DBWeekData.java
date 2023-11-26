@@ -48,7 +48,7 @@ public class DBWeekData {
     }
 
     public Boolean updateWeekDate(Integer memberId) {
-        // TODO: 2023-11-26 오늘 일자로 치환 
+        // TODO: 2023-11-26 오늘 일자로 치환
         String sql = "UPDATE week_data SET monday = ? WHERE member_id = " + memberId;
         Integer passAttendance = 1;
 

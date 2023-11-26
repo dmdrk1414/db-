@@ -110,7 +110,7 @@ public class DBAttendanceStatus {
         }
     }
 
-    public AttendanceStatus findByMemberId(Integer memberId) {
+    private AttendanceStatus findByMemberId(Integer memberId) {
         AttendanceStatus attendanceStatus = null;
         String sql = "SELECT * FROM attendance_status WHERE id = ?";
 

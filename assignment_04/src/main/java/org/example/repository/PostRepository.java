@@ -1,6 +1,7 @@
 package org.example.repository;
 
 import org.example.database.Database;
+import org.example.dto.request.SavePostRequest;
 import org.example.entity.Post;
 
 import java.util.List;
@@ -14,5 +15,9 @@ public class PostRepository {
 
     public List<Post> findAll() {
         return database.findAllPost();
+    }
+
+    public boolean save(SavePostRequest savePostRequest) {
+        return database.savePost(savePostRequest);
     }
 }

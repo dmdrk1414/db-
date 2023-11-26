@@ -29,6 +29,6 @@ class LoginControllerTest {
 
         // than
         assertThat(result.getIsPass()).isTrue();
-        assertThat(result.getGrade()).isEqualTo("실장");
+        assertThat(result.getId()).isEqualTo(1);
     }
 }

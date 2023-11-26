@@ -13,11 +13,11 @@ public class LoginController {
 
     public LoginResponse login(LoginRequest loginRequest) {
         Boolean isPass = loginService.isMember(loginRequest);
-        String grade = loginService.getGrade(loginRequest);
+        Integer id = loginService.getId(loginRequest);
 
         return LoginResponse.builder()
                 .isPass(isPass)
-                .grade(grade)
+                .id(id)
                 .build();
     }
 }

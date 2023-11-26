@@ -21,19 +21,19 @@ public class LoginService {
         return hasMember(members, email, password);
     }
 
-    public String getGrade(LoginRequest loginRequest) {
+    public Integer getId(LoginRequest loginRequest) {
         List<Member> members = memberRepository.findAll();
         String email = loginRequest.getEmail();
-        String grade = getGrade(members, email);
+        Integer id = getId(members, email);
 
-        return grade;
+        return id;
     }
 
-    private String getGrade(List<Member> members, String email) {
+    private Integer getId(List<Member> members, String email) {
         return members.stream()
                 .filter(member -> member.getEmail().equals(email))
                 .findFirst()
-                .map(Member::getGrade)
+                .map(Member::getId)
                 .orElse(null);
     }
 

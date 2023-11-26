@@ -9,5 +9,5 @@ import lombok.*;
 @ToString
 public class LoginResponse {
     private final Boolean isPass;
-    private final String grade;
+    private final Integer id;
 }

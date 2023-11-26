@@ -1,7 +1,7 @@
 package org.example.repository;
 
 import org.example.database.Database;
-import org.example.domain.WeekData;
+import org.example.entity.WeekData;
 
 import java.util.List;
 

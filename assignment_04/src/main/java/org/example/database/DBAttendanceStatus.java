@@ -2,7 +2,7 @@ package org.example.database;
 
 import org.example.config.Config;
 import org.example.constant.RowCount;
-import org.example.domain.AttendanceStatus;
+import org.example.entity.AttendanceStatus;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

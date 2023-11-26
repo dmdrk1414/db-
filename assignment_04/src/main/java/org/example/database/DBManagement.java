@@ -2,8 +2,7 @@ package org.example.database;
 
 import org.example.config.Config;
 import org.example.constant.RowCount;
-import org.example.domain.AttendanceStatus;
-import org.example.domain.Management;
+import org.example.entity.Management;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -40,7 +39,7 @@ public class DBManagement {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-        
+
         return managements;
     }
 }

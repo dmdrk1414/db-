@@ -1,4 +1,4 @@
-package org.example.domain;
+package org.example.entity;
 
 import com.sun.jdi.IntegerType;
 import lombok.*;

@@ -1,6 +1,6 @@
 package org.example.service;
 
-import org.example.domain.WeekData;
+import org.example.entity.WeekData;
 import org.example.repository.WeekDataRepository;
 
 import java.util.List;

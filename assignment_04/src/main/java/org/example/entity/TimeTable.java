@@ -1,4 +1,4 @@
-package org.example.domain;
+package org.example.entity;
 
 import lombok.*;
 
@@ -8,9 +8,9 @@ import lombok.*;
 @AllArgsConstructor
 @ToString
 
-public class Management {
+public class TimeTable {
     private final Integer id;
-    private final String date;
-    private final Integer vacationCount;
+    private final String image;
+    private final String applyDate;
     private final Integer memberId;
 }

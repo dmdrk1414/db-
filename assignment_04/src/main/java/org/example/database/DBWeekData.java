@@ -2,8 +2,7 @@ package org.example.database;
 
 import org.example.config.Config;
 import org.example.constant.RowCount;
-import org.example.domain.TimeTable;
-import org.example.domain.WeekData;
+import org.example.entity.WeekData;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -39,7 +38,7 @@ public class DBWeekData {
                 weekData = Config.getWeekDataFromRowArray(rows);
                 weekDatas.add(weekData);
             }
-            
+
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

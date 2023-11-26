@@ -1,7 +1,7 @@
 package org.example.database;
 
 import lombok.Getter;
-import org.example.domain.*;
+import org.example.entity.*;
 
 import java.sql.Statement;
 import java.util.List;

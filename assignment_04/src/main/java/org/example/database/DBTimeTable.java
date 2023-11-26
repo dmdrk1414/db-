@@ -2,8 +2,7 @@ package org.example.database;
 
 import org.example.config.Config;
 import org.example.constant.RowCount;
-import org.example.domain.Post;
-import org.example.domain.TimeTable;
+import org.example.entity.TimeTable;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

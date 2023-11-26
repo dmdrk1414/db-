@@ -1,6 +1,6 @@
 package org.example.service;
 
-import org.example.domain.Management;
+import org.example.entity.Management;
 import org.example.repository.ManagementRepository;
 
 import java.util.List;

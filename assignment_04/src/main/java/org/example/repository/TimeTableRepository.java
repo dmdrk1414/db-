@@ -1,8 +1,7 @@
 package org.example.repository;
 
 import org.example.database.Database;
-import org.example.domain.Post;
-import org.example.domain.TimeTable;
+import org.example.entity.TimeTable;
 
 import java.util.List;
 

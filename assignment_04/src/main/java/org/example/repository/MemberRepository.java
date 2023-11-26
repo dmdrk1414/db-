@@ -1,8 +1,7 @@
 package org.example.repository;
 
 import org.example.database.Database;
-import org.example.domain.Member;
-import org.example.domain.MemberPortfolio;
+import org.example.entity.Member;
 
 import java.util.List;
 

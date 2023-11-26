@@ -1,7 +1,7 @@
 package org.example.repository;
 
 import org.example.database.Database;
-import org.example.domain.AttendanceStatus;
+import org.example.entity.AttendanceStatus;
 
 import java.util.List;
 

@@ -1,8 +1,7 @@
 package org.example.repository;
 
 import org.example.database.Database;
-import org.example.domain.AttendanceStatus;
-import org.example.domain.Management;
+import org.example.entity.Management;
 
 import java.util.List;
 

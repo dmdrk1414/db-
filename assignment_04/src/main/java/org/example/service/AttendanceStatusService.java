@@ -1,6 +1,6 @@
 package org.example.service;
 
-import org.example.domain.AttendanceStatus;
+import org.example.entity.AttendanceStatus;
 import org.example.repository.AttendanceStatusRepository;
 
 import java.util.List;

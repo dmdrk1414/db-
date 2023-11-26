@@ -1,6 +1,6 @@
 package org.example.config;
 
-import org.example.domain.*;
+import org.example.entity.*;
 
 import java.util.List;
 

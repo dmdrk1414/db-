@@ -50,7 +50,7 @@ public class DBMemberPortfolio {
     public Boolean save(Application application) {
         String sql = "INSERT INTO member_portfolio (motivation_application, gpa, dream, member_id)" +
                 " VALUES (?, ?, ?, ? )";
-        String id = findMemberId(application.getEmail());
+        String memberId = findMemberId(application.getEmail());
 
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
@@ -58,7 +58,7 @@ public class DBMemberPortfolio {
             preparedStatement.setString(1, application.getMotivationApplication());
             preparedStatement.setString(2, application.getGpa());
             preparedStatement.setString(3, application.getDream());
-            preparedStatement.setString(4, id);
+            preparedStatement.setString(4, memberId);
 
             int affectedRows = preparedStatement.executeUpdate();
             if (affectedRows > 0) {

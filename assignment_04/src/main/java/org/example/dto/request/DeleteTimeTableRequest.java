@@ -8,5 +8,5 @@ import lombok.*;
 @Builder
 @ToString
 public class DeleteTimeTableRequest {
-    private final Integer id;
+    private final Integer tableId;
 }

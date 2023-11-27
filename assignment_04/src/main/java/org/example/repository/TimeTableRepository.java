@@ -21,7 +21,7 @@ public class TimeTableRepository {
         return database.saveTimeTable(saveTimeTableRequest);
     }
 
-    public boolean deleteById(Integer id) {
-        return database.deleteById(id);
+    public boolean deleteById(Integer tableId) {
+        return database.deleteById(tableId);
     }
 }

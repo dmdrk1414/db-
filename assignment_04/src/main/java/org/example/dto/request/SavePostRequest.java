@@ -10,5 +10,5 @@ import lombok.*;
 public class SavePostRequest {
     private final String title;
     private final String content;
-    private final Integer id;
+    private final Integer memberId;
 }

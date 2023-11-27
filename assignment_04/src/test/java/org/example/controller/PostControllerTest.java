@@ -6,7 +6,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 
 class PostControllerTest {
     private PostController postController;
@@ -24,7 +23,7 @@ class PostControllerTest {
         SavePostRequest savePostRequest = SavePostRequest.builder()
                 .title(title)
                 .content(content)
-                .id(id)
+                .memberId(id)
                 .build();
 
         Boolean result = postController.savePost(savePostRequest);

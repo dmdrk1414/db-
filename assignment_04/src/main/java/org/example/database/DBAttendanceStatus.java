@@ -49,7 +49,7 @@ public class DBAttendanceStatus {
     public boolean save(Application application) {
         String sql = "INSERT INTO attendance_status (status, attendance_time, attendance_date, member_id)" +
                 " VALUES (?, ?, SYSDATE, ? )";
-        String id = findMemberId(application.getEmail());
+        String memberId = findMemberId(application.getEmail());
 
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
@@ -57,7 +57,7 @@ public class DBAttendanceStatus {
             preparedStatement.setString(1, ConstantAttendanceState.dN_DECIDED.getState());
             preparedStatement.setString(2, "09");
 //            preparedStatement.setString(3, "SYSDATE");
-            preparedStatement.setString(3, id);
+            preparedStatement.setString(3, memberId);
 
             int affectedRows = preparedStatement.executeUpdate();
             if (affectedRows > 0) {
@@ -91,13 +91,13 @@ public class DBAttendanceStatus {
         return null;
     }
 
-    public Boolean updateAttendanceStatus(Integer id) {
-        String sql = "UPDATE attendance_status SET status = ? WHERE member_id = " + id;
+    public Boolean updateAttendanceStatus(Integer memberId) {
+        String sql = "UPDATE attendance_status SET status = ? WHERE member_id = " + memberId;
 
         try (
                 PreparedStatement preparedStatement = connection.prepareStatement(sql)
         ) {
-            if (isAllReadAttendance(id)) {
+            if (isAllReadAttendance(memberId)) {
                 return false;
             }
 

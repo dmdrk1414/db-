@@ -49,14 +49,14 @@ public class DBTimeTable {
     public boolean save(SaveTimeTableRequest saveTimeTableRequest) {
         String sql = "INSERT INTO time_table (name, image, apply_date, member_id)" +
                 " VALUES (?, ?, SYSDATE, ?)";
-        String name = findMemberName(saveTimeTableRequest.getId());
+        String name = findMemberName(saveTimeTableRequest.getMemberId());
 
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
 
             preparedStatement.setString(1, name);
             preparedStatement.setString(2, saveTimeTableRequest.getImage());
-            preparedStatement.setInt(3, saveTimeTableRequest.getId());
+            preparedStatement.setInt(3, saveTimeTableRequest.getMemberId());
 
             int affectedRows = preparedStatement.executeUpdate();
             if (affectedRows > 0) {
@@ -69,13 +69,13 @@ public class DBTimeTable {
         return false;
     }
 
-    public boolean deleteById(Integer id) {
+    public boolean deleteById(Integer tableId) {
         String sql = "DELETE FROM time_table WHERE id = ?";
 
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
 
-            preparedStatement.setInt(1, id);
+            preparedStatement.setInt(1, tableId);
 
             Integer affectedRows = preparedStatement.executeUpdate();
 

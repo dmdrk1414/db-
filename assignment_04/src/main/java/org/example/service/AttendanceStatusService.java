@@ -21,7 +21,7 @@ public class AttendanceStatusService {
         return attendanceStatusRepository.save(application);
     }
 
-    public boolean updateAttendanceStatus(Integer id) {
-        return attendanceStatusRepository.updateAttendanceStatus(id);
+    public boolean updateAttendanceStatus(Integer memberId) {
+        return attendanceStatusRepository.updateAttendanceStatus(memberId);
     }
 }

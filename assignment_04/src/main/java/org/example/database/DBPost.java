@@ -49,7 +49,7 @@ public class DBPost {
     public boolean save(SavePostRequest savePostRequest) {
         String sql = "INSERT INTO post (title, content, post_date, name, member_id)" +
                 " VALUES (?, ?, SYSDATE, ?, ? )";
-        String name = findMemberName(savePostRequest.getId());
+        String name = findMemberName(savePostRequest.getMemberId());
 
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
@@ -57,7 +57,7 @@ public class DBPost {
             preparedStatement.setString(1, savePostRequest.getTitle());
             preparedStatement.setString(2, savePostRequest.getContent());
             preparedStatement.setString(3, name);
-            preparedStatement.setInt(4, savePostRequest.getId());
+            preparedStatement.setInt(4, savePostRequest.getMemberId());
 
             int affectedRows = preparedStatement.executeUpdate();
             if (affectedRows > 0) {

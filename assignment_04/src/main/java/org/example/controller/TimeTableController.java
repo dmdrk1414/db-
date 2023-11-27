@@ -19,7 +19,7 @@ public class TimeTableController {
     }
 
     public Boolean deleteTimeTableById(DeleteTimeTableRequest deleteTimeTableRequest) {
-        if (timeTableService.deleteById(deleteTimeTableRequest.getId())) {
+        if (timeTableService.deleteById(deleteTimeTableRequest.getTableId())) {
             return true;
         }
         return false;

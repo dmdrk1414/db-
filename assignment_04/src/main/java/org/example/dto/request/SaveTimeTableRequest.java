@@ -8,6 +8,6 @@ import lombok.*;
 @Builder
 @ToString
 public class SaveTimeTableRequest {
-    private final Integer id;
+    private final Integer memberId;
     private final String image;
 }

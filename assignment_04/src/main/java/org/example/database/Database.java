@@ -64,8 +64,8 @@ public class Database {
         return new DBAttendanceStatus(dbStatement, connection).save(application);
     }
 
-    public boolean updateAttendanceStatus(Integer id) {
-        return new DBAttendanceStatus(dbStatement, connection).updateAttendanceStatus(id);
+    public boolean updateAttendanceStatus(Integer memberId) {
+        return new DBAttendanceStatus(dbStatement, connection).updateAttendanceStatus(memberId);
     }
 
     public Boolean updateWeekDate(Integer memberId) {
@@ -84,7 +84,7 @@ public class Database {
         return new DBTimeTable(dbStatement, connection).save(saveTimeTableRequest);
     }
 
-    public boolean deleteById(Integer id) {
-        return new DBTimeTable(dbStatement, connection).deleteById(id);
+    public boolean deleteById(Integer tableId) {
+        return new DBTimeTable(dbStatement, connection).deleteById(tableId);
     }
 }

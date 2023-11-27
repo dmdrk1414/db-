@@ -20,7 +20,7 @@ class TimeTableControllerTest {
     void 이미지_테이블_사진_추가() {
         String imagePath = ImageUrl.IMAGE_URL_ROOT.getUrl() + "/insert_test_image.png";
         SaveTimeTableRequest saveTimeTableRequest = SaveTimeTableRequest.builder()
-                .id(1)
+                .memberId(1)
                 .image(imagePath)
                 .build();
 

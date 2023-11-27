@@ -1,13 +1,13 @@
 package org.example.controller;
 
-import org.example.dto.request.AttendanceRequest;
+import org.example.back.controller.AttendanceController;
+import org.example.back.dto.request.AttendanceRequest;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 
 class AttendanceControllerTest {
     private AttendanceController attendanceController;

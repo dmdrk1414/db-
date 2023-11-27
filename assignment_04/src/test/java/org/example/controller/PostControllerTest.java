@@ -1,7 +1,8 @@
 package org.example.controller;
 
-import org.example.dto.request.DeletePostRequest;
-import org.example.dto.request.SavePostRequest;
+import org.example.back.controller.PostController;
+import org.example.back.dto.request.DeletePostRequest;
+import org.example.back.dto.request.SavePostRequest;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

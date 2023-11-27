@@ -1,9 +1,9 @@
 package org.example.controller;
 
-import org.example.dto.request.ApplicationRequest;
-import org.example.entity.MemberPortfolio;
-import org.example.repository.MemberPortFolioRepository;
-import org.example.repository.MemberRepository;
+import org.example.back.controller.ApplicationController;
+import org.example.back.dto.request.ApplicationRequest;
+import org.example.back.repository.MemberPortFolioRepository;
+import org.example.back.repository.MemberRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

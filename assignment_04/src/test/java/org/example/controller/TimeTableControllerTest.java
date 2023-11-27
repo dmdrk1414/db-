@@ -1,19 +1,10 @@
 package org.example.controller;
 
 import org.example.constant.ImageUrl;
+import org.example.dto.request.DeleteTimeTableRequest;
 import org.example.dto.request.SaveTimeTableRequest;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import javax.imageio.ImageIO;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
-import java.net.URISyntaxException;
-import java.net.URL;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -34,6 +25,16 @@ class TimeTableControllerTest {
                 .build();
 
         Boolean result = timeTableController.saveTimeTable(saveTimeTableRequest);
+
+        assertThat(result).isTrue();
+    }
+
+    @Test
+    void 이미지_테이블_사진_삭제() {
+        Integer id = 2;
+        DeleteTimeTableRequest deleteTimeTableRequest = new DeleteTimeTableRequest(id);
+
+        Boolean result = timeTableController.deleteTimeTableById(deleteTimeTableRequest);
 
         assertThat(result).isTrue();
     }

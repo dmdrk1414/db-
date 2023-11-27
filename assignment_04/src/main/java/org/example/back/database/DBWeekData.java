@@ -1,7 +1,9 @@
 package org.example.back.database;
 
 import org.example.back.config.Config;
+import org.example.back.constant.ConstantAttendanceState;
 import org.example.back.constant.RowCount;
+import org.example.back.domain.Application;
 import org.example.back.entity.WeekData;
 
 import java.sql.*;
@@ -61,5 +63,70 @@ public class DBWeekData {
         } catch (SQLException e) {
             throw new RuntimeException("Failed to retrieve member by email", e);
         }
+    }
+
+    public boolean save(Application application) {
+        String sql = "INSERT INTO week_data (monday, tuesday, wednesday, thursday, friday, management_id, member_id)" +
+                " VALUES (0, 0, 0, 0, 0, ?, ?)";
+        Integer memberId = findMemberId(application.getEmail());
+        Integer managementId = findManageMentId(memberId);
+
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+
+            preparedStatement.setInt(1, managementId);
+            preparedStatement.setInt(2, memberId);
+
+            int affectedRows = preparedStatement.executeUpdate();
+            if (affectedRows > 0) {
+                return true;
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+        return false;
+    }
+
+    private Integer findManageMentId(Integer memberId) {
+        String sql = "SELECT * FROM management WHERE member_id = ?";
+
+        try (
+                PreparedStatement preparedStatement = connection.prepareStatement(sql)
+        ) {
+            preparedStatement.setString(1, String.valueOf(memberId));
+
+            try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                if (resultSet.next()) {
+                    // ResultSet에서 데이터를 읽어와 Member 객체를 생성하거나 반환 로직 추가
+                    return resultSet.getInt("id");
+                }
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException("Failed to retrieve member by email", e);
+        }
+
+        return null;
+    }
+
+    private Integer findMemberId(String email) {
+        String sql = "SELECT * FROM member WHERE email = ?";
+
+        try (
+                PreparedStatement preparedStatement = connection.prepareStatement(sql)
+        ) {
+            preparedStatement.setString(1, String.valueOf(email));
+
+            try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                if (resultSet.next()) {
+                    // ResultSet에서 데이터를 읽어와 Member 객체를 생성하거나 반환 로직 추가
+                    return resultSet.getInt("id");
+                }
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException("Failed to retrieve member by email", e);
+        }
+
+        return null;
     }
 }

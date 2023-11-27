@@ -5,7 +5,6 @@ import org.example.back.dto.request.SavePostRequest;
 import org.example.back.dto.request.SaveTimeTableRequest;
 import org.example.back.entity.*;
 import org.example.back.domain.Application;
-import org.example.entity.*;
 
 import java.sql.Connection;
 import java.sql.Statement;
@@ -26,7 +25,7 @@ public class Database {
     }
 
     public List<Management> findAllManagement() {
-        return new DBManagement(dbStatement).findAll();
+        return new DBManagement(dbStatement, connection).findAll();
     }
 
     public List<Member> findAllMember() {
@@ -87,5 +86,13 @@ public class Database {
 
     public boolean deleteById(Integer tableId) {
         return new DBTimeTable(dbStatement, connection).deleteById(tableId);
+    }
+
+    public boolean saveWeekDate(Application application) {
+        return new DBWeekData(dbStatement, connection).save(application);
+    }
+
+    public boolean saveManagement(Application application) {
+        return new DBManagement(dbStatement, connection).save(application);
     }
 }

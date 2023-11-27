@@ -1,7 +1,6 @@
 package org.example.back.config;
 
 import org.example.back.entity.*;
-import org.example.entity.*;
 
 import java.util.List;
 

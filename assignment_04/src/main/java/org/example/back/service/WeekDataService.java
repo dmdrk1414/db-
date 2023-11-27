@@ -1,5 +1,6 @@
 package org.example.back.service;
 
+import org.example.back.domain.Application;
 import org.example.back.entity.WeekData;
 import org.example.back.repository.WeekDataRepository;
 
@@ -18,5 +19,9 @@ public class WeekDataService {
 
     public Boolean updateWeekDate(Integer memberId) {
         return weekDataRepository.updateWeekDate(memberId);
+    }
+
+    public boolean save(Application application) {
+        return weekDataRepository.save(application);
     }
 }

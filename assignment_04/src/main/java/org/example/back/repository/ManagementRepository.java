@@ -1,5 +1,6 @@
 package org.example.back.repository;
 
+import org.example.back.domain.Application;
 import org.example.back.entity.Management;
 import org.example.back.database.Database;
 
@@ -14,5 +15,9 @@ public class ManagementRepository {
 
     public List<Management> findAll() {
         return database.findAllManagement();
+    }
+
+    public boolean save(Application application) {
+        return database.saveManagement(application);
     }
 }

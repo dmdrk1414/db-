@@ -1,5 +1,6 @@
 package org.example.back.service;
 
+import org.example.back.domain.Application;
 import org.example.back.entity.Management;
 import org.example.back.repository.ManagementRepository;
 
@@ -14,5 +15,9 @@ public class ManagementService {
 
     public List<Management> findAll() {
         return managementRepository.findAll();
+    }
+
+    public boolean save(Application application) {
+        return managementRepository.save(application);
     }
 }

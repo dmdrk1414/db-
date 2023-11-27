@@ -1,5 +1,6 @@
 package org.example.service;
 
+import org.example.dto.request.SaveTimeTableRequest;
 import org.example.entity.TimeTable;
 import org.example.repository.TimeTableRepository;
 
@@ -14,5 +15,9 @@ public class TimeTableService {
 
     public List<TimeTable> findAll() {
         return timeTableRepository.findAll();
+    }
+
+    public boolean save(SaveTimeTableRequest saveTimeTableRequest) {
+        return timeTableRepository.save(saveTimeTableRequest);
     }
 }

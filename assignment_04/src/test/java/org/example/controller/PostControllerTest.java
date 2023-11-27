@@ -1,5 +1,6 @@
 package org.example.controller;
 
+import org.example.dto.request.DeletePostRequest;
 import org.example.dto.request.SavePostRequest;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -27,6 +28,16 @@ class PostControllerTest {
                 .build();
 
         Boolean result = postController.savePost(savePostRequest);
+
+        assertThat(result).isTrue();
+    }
+
+    @Test
+    void 게시판_삭제_id() {
+        Integer postId = 7;
+        DeletePostRequest deletePostRequest = new DeletePostRequest(postId);
+
+        Boolean result = postController.deletePostByPostId(deletePostRequest);
 
         assertThat(result).isTrue();
     }

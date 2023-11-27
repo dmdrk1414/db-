@@ -15,7 +15,7 @@ public class AttendanceController {
 
     public Boolean passAttendance(AttendanceRequest attendanceRequest) {
         if (isPassAttendance(attendanceRequest)) {
-            weekDataService.updateWeekDate(attendanceRequest.getId());
+            weekDataService.updateWeekDate(attendanceRequest.getMemberId());
             return true;
         }
         return false;
@@ -23,6 +23,6 @@ public class AttendanceController {
 
     private boolean isPassAttendance(AttendanceRequest attendanceRequest) {
         return attendanceRequest.getAttendenceNumber().trim() == "1234" &&
-                attendanceStatusService.updateAttendanceStatus(attendanceRequest.getId());
+                attendanceStatusService.updateAttendanceStatus(attendanceRequest.getMemberId());
     }
 }

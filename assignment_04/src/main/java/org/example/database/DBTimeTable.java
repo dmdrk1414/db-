@@ -69,6 +69,26 @@ public class DBTimeTable {
         return false;
     }
 
+    public boolean deleteById(Integer id) {
+        String sql = "DELETE FROM time_table WHERE id = ?";
+
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+
+            preparedStatement.setInt(1, id);
+
+            Integer affectedRows = preparedStatement.executeUpdate();
+
+            if (affectedRows > 0) {
+                return true;
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+        return false;
+    }
+
     private String findMemberName(Integer memberId) {
         String sql = "SELECT * FROM member WHERE id = ?";
 
@@ -89,4 +109,5 @@ public class DBTimeTable {
 
         return null;
     }
+
 }

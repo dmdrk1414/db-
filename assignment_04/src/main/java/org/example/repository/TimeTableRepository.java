@@ -20,4 +20,8 @@ public class TimeTableRepository {
     public boolean save(SaveTimeTableRequest saveTimeTableRequest) {
         return database.saveTimeTable(saveTimeTableRequest);
     }
+
+    public boolean deleteById(Integer id) {
+        return database.deleteById(id);
+    }
 }

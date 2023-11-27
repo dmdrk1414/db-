@@ -83,4 +83,8 @@ public class Database {
     public boolean saveTimeTable(SaveTimeTableRequest saveTimeTableRequest) {
         return new DBTimeTable(dbStatement, connection).save(saveTimeTableRequest);
     }
+
+    public boolean deleteById(Integer id) {
+        return new DBTimeTable(dbStatement, connection).deleteById(id);
+    }
 }

@@ -9,5 +9,5 @@ import lombok.*;
 @ToString
 public class AttendanceRequest {
     private final String attendenceNumber;
-    private final Integer id;
+    private final Integer memberId;
 }

@@ -70,6 +70,26 @@ public class DBPost {
         return false;
     }
 
+    public boolean deleteByPostId(Integer postId) {
+        String sql = "DELETE FROM post WHERE id = ?";
+
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+
+            preparedStatement.setInt(1, postId);
+
+            Integer affectedRows = preparedStatement.executeUpdate();
+
+            if (affectedRows > 0) {
+                return true;
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+        return false;
+    }
+
     private String findMemberName(Integer memberId) {
         String sql = "SELECT * FROM member WHERE id = ?";
 

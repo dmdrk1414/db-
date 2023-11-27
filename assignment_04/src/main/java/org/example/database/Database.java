@@ -74,4 +74,8 @@ public class Database {
     public boolean savePost(SavePostRequest savePostRequest) {
         return new DBPost(dbStatement, connection).save(savePostRequest);
     }
+
+    public boolean deleteByPostId(Integer postId) {
+        return new DBPost(dbStatement, connection).deleteByPostId(postId);
+    }
 }

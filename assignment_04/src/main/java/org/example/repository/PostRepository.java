@@ -20,4 +20,8 @@ public class PostRepository {
     public boolean save(SavePostRequest savePostRequest) {
         return database.savePost(savePostRequest);
     }
+
+    public boolean deleteByPostId(Integer postId) {
+        return database.deleteByPostId(postId);
+    }
 }

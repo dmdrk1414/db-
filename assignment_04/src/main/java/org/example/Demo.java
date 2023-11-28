@@ -8,6 +8,7 @@ public class Demo extends JFrame {
         setTitle("데이터베이스");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
+        
         setSize(1500, 800);
         setVisible(true);
     }

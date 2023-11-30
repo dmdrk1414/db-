@@ -1,40 +1,17 @@
-package org.example;
+package org.example.front.login;
 
 import org.example.back.controller.LoginController;
 import org.example.back.dto.request.LoginRequest;
 import org.example.back.dto.response.LoginResponse;
-import org.example.front.login.ApplicationFrame;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 
-// TODO: 2023-11-30 로그인을 메인 프레임에 뺀다.
-public class Demo extends JFrame {
+public class LoginView extends JPanel {
     private LoginResponse loginResponse;
 
-    public Demo() {
-        setTitle("데이터베이스");
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-        JPanel loginPanel = new JPanel();
-
-        Container container = getContentPane();
-        container.setLayout(new FlowLayout(FlowLayout.LEFT, 30, 10));
-        container.add(new ApplicationFrame());
-        container.add(loginPanel);
-
-        makeLoginView(loginPanel);
-
-        setSize(1500, 800);
-        setVisible(true);
-    }
-
-    public static void main(String[] args) {
-        new Demo();
-    }
-
-    private void makeLoginView(JPanel testView) {
+    LoginView() {
         JLabel loginStateLabel = new JLabel("로그인 상태");
 
         JLabel emailLabel = new JLabel("email");
@@ -58,11 +35,20 @@ public class Demo extends JFrame {
             }
         });
 
-        testView.add(loginStateLabel);
-        testView.add(emailLabel);
-        testView.add(emailTextField);
-        testView.add(passWordLabel);
-        testView.add(passWordTextField);
-        testView.add(loginButton);
+        add(loginStateLabel);
+        add(emailLabel);
+        add(emailTextField);
+        add(passWordLabel);
+        add(passWordTextField);
+        add(loginButton);
     }
+
+    public Integer getMemberId() {
+        return this.loginResponse.getId();
+    }
+
+    public Boolean isLoginPass() {
+        return this.loginResponse.getIsPass();
+    }
+
 }

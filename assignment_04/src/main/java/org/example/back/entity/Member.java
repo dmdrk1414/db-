@@ -22,6 +22,7 @@ public class Member {
     }
 
     public String[] ofArray() {
+
         String[] array = new String[SIZE_COUNT];
         array[0] = String.valueOf(this.id);
         array[1] = this.name;

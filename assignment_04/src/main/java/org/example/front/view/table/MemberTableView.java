@@ -1,28 +1,30 @@
-package org.example.front.login;
+package org.example.front.view.table;
 
 import org.example.back.controller.DataBaseController;
 import org.example.back.entity.Member;
 import org.example.front.constant.DBTable;
-import org.example.front.inter.ViewBasic;
+import org.example.front.inter.TableViewBasic;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.util.List;
 
-public class ApplicationFrame extends JPanel implements ViewBasic {
+public class MemberTableView extends JPanel implements TableViewBasic {
 
-    private final String[] dbColumnNames;
+    private static final String MEMBER_TABLE = "member";
+    private final String[] memberTableColumnNames;
     private final DefaultTableModel mainTable;
     private final JTable mamberTable;
 
-    public ApplicationFrame() {
-        dbColumnNames = new DBTable().get("member");
-        mainTable = new DefaultTableModel(dbColumnNames, 0);
+    public MemberTableView() {
+        memberTableColumnNames = new DBTable().get(MEMBER_TABLE);
+        mainTable = new DefaultTableModel(memberTableColumnNames, 0);
         mamberTable = new JTable(mainTable);
 
         setLayout(new BorderLayout());
-        add(mamberTable, BorderLayout.NORTH);
+        add(new JLabel(MEMBER_TABLE + " 회원 관리 테이블"), BorderLayout.NORTH);
+        add(mamberTable, BorderLayout.CENTER);
 
         creatTable();
     }

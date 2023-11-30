@@ -31,7 +31,7 @@ public class Config {
                 .email(rows.get(2))
                 .password(rows.get(3))
                 .grade(rows.get(4))
-                .phonNumber(rows.get(5))
+                .phoneNumber(rows.get(5))
                 .build();
     }
 

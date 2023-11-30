@@ -86,7 +86,7 @@ public class DBMember {
                             .name(resultSet.getString("name"))
                             .email(resultSet.getString("email"))
                             .password(resultSet.getString("password"))
-                            .phonNumber(resultSet.getString("phone_number"))
+                            .phoneNumber(resultSet.getString("phone_number"))
                             .build();
                 }
             }

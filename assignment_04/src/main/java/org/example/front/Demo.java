@@ -23,7 +23,7 @@ public class Demo extends JFrame {
         container.add(new SectionTableView());
         container.add(new SectionTimeTableView());
         container.add(new CourseTableView());
-//        container.add(new StudentTableView());
+        container.add(new StudentTableView());
 
         setSize(1500, 800);
         setVisible(true);

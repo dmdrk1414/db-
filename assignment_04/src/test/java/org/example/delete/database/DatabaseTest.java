@@ -1,4 +1,4 @@
-package org.example.database;
+package org.example.delete.database;
 
 import org.example.delete.back.database.Database;
 import org.example.delete.back.domain.Application;

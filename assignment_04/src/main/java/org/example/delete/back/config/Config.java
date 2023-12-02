@@ -1,6 +1,5 @@
 package org.example.delete.back.config;
 
-import org.example.back.entity.*;
 import org.example.delete.back.entity.*;
 
 import java.util.List;

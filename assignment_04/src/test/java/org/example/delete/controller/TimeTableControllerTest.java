@@ -1,4 +1,4 @@
-package org.example.controller;
+package org.example.delete.controller;
 
 import org.example.delete.back.constant.ImageUrl;
 import org.example.delete.back.controller.TimeTableController;

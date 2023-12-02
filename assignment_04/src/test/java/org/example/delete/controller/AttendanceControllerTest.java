@@ -1,4 +1,4 @@
-package org.example.controller;
+package org.example.delete.controller;
 
 import org.example.delete.back.controller.AttendanceController;
 import org.example.delete.back.dto.request.AttendanceRequest;

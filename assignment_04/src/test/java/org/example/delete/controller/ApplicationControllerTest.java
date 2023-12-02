@@ -1,4 +1,4 @@
-package org.example.controller;
+package org.example.delete.controller;
 
 import org.example.delete.back.controller.ApplicationController;
 import org.example.delete.back.dto.request.ApplicationRequest;
@@ -6,8 +6,6 @@ import org.example.delete.back.repository.MemberPortFolioRepository;
 import org.example.delete.back.repository.MemberRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import static org.assertj.core.api.Assertions.assertThat;
 
 class ApplicationControllerTest {
     private MemberRepository memberRepository;

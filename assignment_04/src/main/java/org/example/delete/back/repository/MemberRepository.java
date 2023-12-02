@@ -1,16 +1,16 @@
 package org.example.delete.back.repository;
 
-import org.example.delete.back.entity.Member;
-import org.example.delete.back.database.Database;
+import org.example.delete.back.database.DatabaseDelete;
 import org.example.delete.back.domain.Application;
+import org.example.delete.back.entity.Member;
 
 import java.util.List;
 
 public class MemberRepository {
-    private final Database database;
+    private final DatabaseDelete database;
 
     public MemberRepository() {
-        this.database = new Database();
+        this.database = new DatabaseDelete();
     }
 
     public List<Member> findAll() {

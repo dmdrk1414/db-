@@ -1,17 +1,17 @@
 package org.example.delete.database;
 
-import org.example.delete.back.database.Database;
+import org.example.delete.back.database.DatabaseDelete;
 import org.example.delete.back.domain.Application;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class DatabaseTest {
-    private Database database;
+    private DatabaseDelete database;
 
 
     @BeforeEach
     void setUp() {
-        this.database = new Database();
+        this.database = new DatabaseDelete();
     }
 
     @Test

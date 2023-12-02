@@ -11,11 +11,11 @@ import java.sql.Statement;
 import java.util.List;
 
 @Getter
-public class Database {
+public class DatabaseDelete {
     private final Statement dbStatement;
     private final Connection connection;
 
-    public Database() {
+    public DatabaseDelete() {
         this.dbStatement = new DBConnectionDelete().getStatement();
         this.connection = new DBConnectionDelete().getConnection();
     }

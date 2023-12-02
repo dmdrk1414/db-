@@ -1,16 +1,16 @@
 package org.example.delete.back.repository;
 
-import org.example.delete.back.entity.TimeTable;
-import org.example.delete.back.database.Database;
+import org.example.delete.back.database.DatabaseDelete;
 import org.example.delete.back.dto.request.SaveTimeTableRequest;
+import org.example.delete.back.entity.TimeTable;
 
 import java.util.List;
 
 public class TimeTableRepository {
-    private final Database database;
+    private final DatabaseDelete database;
 
     public TimeTableRepository() {
-        this.database = new Database();
+        this.database = new DatabaseDelete();
     }
 
     public List<TimeTable> findAll() {

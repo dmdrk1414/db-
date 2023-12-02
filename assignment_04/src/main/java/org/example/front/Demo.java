@@ -2,6 +2,7 @@ package org.example.front;
 
 import org.example.front.tableView.CollegePhoneTableView;
 import org.example.front.tableView.CollegeTableView;
+import org.example.front.tableView.InstructRankTableView;
 import org.example.front.tableView.InstructorTableView;
 
 import javax.swing.*;
@@ -19,7 +20,7 @@ public class Demo extends JFrame {
         container.setLayout(new FlowLayout(FlowLayout.LEFT, MARGIN_WIDTH_VGAP, MARGIN_WIDTH_VGAP));
         container.add(new CollegeTableView());
         container.add(new CollegePhoneTableView());
-        container.add(new CollegePhoneTableView());
+        container.add(new InstructRankTableView());
         container.add(new InstructorTableView());
 
         setSize(1500, 800);

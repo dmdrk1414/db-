@@ -2,7 +2,7 @@ package org.example.back.database;
 
 import org.example.back.config.Config;
 import org.example.back.constant.RowConstant;
-import org.example.back.entity.SectionTime;
+import org.example.back.entity.Section;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -11,38 +11,38 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DESectionTime {
-    private static final Integer SECTION_TIME_COUNT = RowConstant.SECTION_TIME.getRowCount();
+public class DBSection {
+    private static final Integer SECTION_ROW_COUNT = RowConstant.SECTION.getRowCount();
     private final Statement statement;
     private final Connection connection;
 
-    public DESectionTime(Statement dbStatement, Connection connection) {
+    public DBSection(Statement dbStatement, Connection connection) {
         this.statement = dbStatement;
         this.connection = connection;
     }
 
-    public List<SectionTime> findAll() {
-        List<SectionTime> sectionTimes = new ArrayList<>();
-        SectionTime sectionTime = null;
+    public List<Section> findAll() {
+        List<Section> sections = new ArrayList<>();
+        Section section = null;
 
         try {
-            String sql = "SELECT * FROM section_time"; // SQL 쿼리
+            String sql = "SELECT * FROM section"; // SQL 쿼리
             ResultSet resultSet = statement.executeQuery(sql);
 
             while (resultSet.next()) {
                 List<String> rows = new ArrayList<>();
 
-                for (int i = 1; i <= SECTION_TIME_COUNT; i++) {
+                for (int i = 1; i <= SECTION_ROW_COUNT; i++) {
                     rows.add(resultSet.getString(i));
                 }
 
-                sectionTime = Config.getSectionTimeFromRowArray(rows);
-                sectionTimes.add(sectionTime);
+                section = Config.getSectionFromRowArray(rows);
+                sections.add(section);
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
 
-        return sectionTimes;
+        return sections;
     }
 }

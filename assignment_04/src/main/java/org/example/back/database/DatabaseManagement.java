@@ -43,11 +43,11 @@ public class DatabaseManagement {
     }
 
     public List<Section> findAllSection() {
-        return new DESection(dbStatement, connection).findAll();
+        return new DBSection(dbStatement, connection).findAll();
     }
 
     public List<SectionTime> findAllSectionTime() {
-        return new DESectionTime(dbStatement, connection).findAll();
+        return new DBSectionTime(dbStatement, connection).findAll();
     }
 
     public List<Student> findAllStudent() {

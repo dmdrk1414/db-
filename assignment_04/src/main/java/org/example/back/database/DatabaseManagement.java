@@ -57,4 +57,12 @@ public class DatabaseManagement {
     public List<CourseTake> findAllCourseTake() {
         return new DBCourseTake(dbStatement, connection).findAll();
     }
+
+    public Boolean applyCourseTake(String studentId, String courseName, String courseCode, String sectionDevisionNumber) {
+        return new DBCourseTake(dbStatement, connection).save(studentId, courseName, courseCode, sectionDevisionNumber);
+    }
+
+    public CourseTake findCourseTakeByStudentId(String studentId) {
+        return new DBCourseTake(dbStatement, connection).findByStudentId(studentId);
+    }
 }

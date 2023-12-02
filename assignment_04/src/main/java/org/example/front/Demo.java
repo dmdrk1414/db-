@@ -1,6 +1,7 @@
 package org.example.front;
 
 import org.example.front.tableView.*;
+import org.example.front.view.ApplyView;
 
 import javax.swing.*;
 import java.awt.*;
@@ -24,6 +25,7 @@ public class Demo extends JFrame {
         container.add(new SectionTimeTableView());
         container.add(new CourseTableView());
         container.add(new StudentTableView());
+        container.add(new ApplyView());
 
         setSize(1500, 800);
         setVisible(true);
@@ -32,4 +34,6 @@ public class Demo extends JFrame {
     public static void main(String[] args) {
         new Demo();
     }
+
+
 }

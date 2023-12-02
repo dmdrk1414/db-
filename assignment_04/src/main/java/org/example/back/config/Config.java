@@ -104,4 +104,14 @@ public class Config {
                 .departmentCode(rows.get(6))
                 .build();
     }
+
+    public static CourseTake getCourceTakeFromRowArray(List<String> rows) {
+        return CourseTake.builder()
+                .id(rows.get(0))
+                .studentId(rows.get(1))
+                .courseName(rows.get(2))
+                .courseCode(rows.get(3))
+                .sectionDevisionNumber(rows.get(4))
+                .build();
+    }
 }

@@ -13,7 +13,8 @@ public enum TableStringConstant {
     TABLE_NAME_COURSE("course"),
     TABLE_NAME_SECTION("section"),
     TABLE_NAME_SECTION_TIME("section_time"),
-    TABLE_NAME_STUDENT("student");
+    TABLE_NAME_STUDENT("student"),
+    TABLE_NAME_COURSE_TAKE("course_take");
 
     private final String name;
 

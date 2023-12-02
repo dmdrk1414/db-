@@ -12,7 +12,8 @@ public enum RowConstant {
     COURSE(7),
     SECTION(10),
     SECTION_TIME(3),
-    STUDENT(7);
+    STUDENT(7),
+    COURSE_TAKE(5);
 
     private final Integer rowCount;
 

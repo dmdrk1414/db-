@@ -66,8 +66,22 @@ public class Config {
                 .departmentCode(rows.get(6))
                 .build();
     }
-//    section;
 
+    //    section;
+    public static Section getSectionFromRowArray(List<String> rows) {
+        return Section.builder()
+                .id(rows.get(0))
+                .devisionNumber(rows.get(1))
+                .month(rows.get(2))
+                .year(rows.get(3))
+                .day(rows.get(4))
+                .instructorId(rows.get(5))
+                .courseCode(rows.get(6))
+                .courseName(rows.get(7))
+                .roomNumber(rows.get(8))
+                .building(rows.get(9))
+                .build();
+    }
 //    section_time;
 
 //    student;

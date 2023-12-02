@@ -1,5 +1,6 @@
 package org.example.front;
 
+import org.example.front.tableView.CollegePhoneTableView;
 import org.example.front.tableView.CollegeTableView;
 
 import javax.swing.*;
@@ -15,6 +16,7 @@ public class Demo extends JFrame {
         Container container = getContentPane();
         container.setLayout(new FlowLayout(FlowLayout.LEFT, MARGIN_WIDTH_VGAP, MARGIN_WIDTH_VGAP));
         container.add(new CollegeTableView());
+        container.add(new CollegePhoneTableView());
 
         setSize(1500, 800);
         setVisible(true);

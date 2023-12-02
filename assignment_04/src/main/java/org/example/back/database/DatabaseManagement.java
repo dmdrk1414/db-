@@ -4,6 +4,7 @@ import lombok.Getter;
 import org.example.back.entity.College;
 import org.example.back.entity.CollegePhone;
 import org.example.back.entity.Department;
+import org.example.back.entity.Instructor;
 
 import java.sql.Connection;
 import java.sql.Statement;
@@ -30,5 +31,9 @@ public class DatabaseManagement {
 
     public List<Department> findALlDepartment() {
         return new DBDepartment(dbStatement, connection).findAll();
+    }
+
+    public List<Instructor> findAllInstructor() {
+        return new DBInstructor(dbStatement, connection).findAll();
     }
 }

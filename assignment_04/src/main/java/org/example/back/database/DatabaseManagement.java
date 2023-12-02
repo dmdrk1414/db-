@@ -41,4 +41,8 @@ public class DatabaseManagement {
     public List<Course> findAllCourse() {
         return new DBCourse(dbStatement, connection).findAll();
     }
+
+    public List<Section> findAllSection() {
+        return new DESection(dbStatement, connection).findAll();
+    }
 }

@@ -56,4 +56,11 @@ class DatabaseManagementTest {
 
         TestMethod.printFindAll(result);
     }
+
+    @Test
+    public void 분반_findAll_기능() throws Exception {
+        List<Section> result = databaseManagement.findAllSection();
+
+        TestMethod.printFindAll(result);
+    }
 }

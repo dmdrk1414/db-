@@ -10,10 +10,10 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 
 // TODO: 2023-11-30 로그인을 메인 프레임에 뺀다.
-public class Demo extends JFrame {
+public class DemoDelete extends JFrame {
     private LoginResponse loginResponse;
 
-    public Demo() {
+    public DemoDelete() {
         setTitle("데이터베이스");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -31,7 +31,7 @@ public class Demo extends JFrame {
     }
 
     public static void main(String[] args) {
-        new Demo();
+        new DemoDelete();
     }
 
     private void makeLoginView(JPanel loginFrame) {

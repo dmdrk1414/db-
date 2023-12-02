@@ -53,4 +53,8 @@ public class DatabaseManagement {
     public List<Student> findAllStudent() {
         return new DBStudent(dbStatement, connection).findAll();
     }
+
+    public List<CourseTake> findAllCourseTake() {
+        return new DBCourseTake(dbStatement, connection).findAll();
+    }
 }

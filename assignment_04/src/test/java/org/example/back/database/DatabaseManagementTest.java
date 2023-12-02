@@ -49,4 +49,11 @@ class DatabaseManagementTest {
 
         TestMethod.printFindAll(result);
     }
+
+    @Test
+    public void 강의_수업_findAll_기능() throws Exception {
+        List<Course> result = databaseManagement.findAllCourse();
+
+        TestMethod.printFindAll(result);
+    }
 }

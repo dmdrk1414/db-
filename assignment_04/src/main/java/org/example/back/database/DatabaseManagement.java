@@ -37,4 +37,8 @@ public class DatabaseManagement {
     public List<InstructorRank> findAllInstructorRank() {
         return new DBInstructorRank(dbStatement, connection).findAll();
     }
+
+    public List<Course> findAllCourse() {
+        return new DBCourse(dbStatement, connection).findAll();
+    }
 }

@@ -2,6 +2,7 @@ package org.example.back.database;
 
 import lombok.Getter;
 import org.example.back.entity.College;
+import org.example.back.entity.CollegePhone;
 
 import java.sql.Connection;
 import java.sql.Statement;
@@ -20,5 +21,9 @@ public class DatabaseManagement {
 
     public List<College> findAllCollege() {
         return new DBCollege(dbStatement, connection).findAll();
+    }
+
+    public List<CollegePhone> findAllCollegePhone() {
+        return new DBCollegePhone(dbStatement, connection).findAll();
     }
 }

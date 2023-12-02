@@ -8,7 +8,7 @@ import lombok.*;
 @Builder
 @ToString
 public class CollegePhone {
-    private final Integer id;
+    private final String id;
     private final String phone;
     private final String college_name;
 }

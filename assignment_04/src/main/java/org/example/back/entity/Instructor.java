@@ -8,12 +8,12 @@ import lombok.*;
 @Builder
 @ToString
 public class Instructor {
-    private final Integer id;
-    private final Integer name;
-    private final Integer office;
-    private final Integer phone;
-    private final Integer departmentName;
-    private final Integer departmentCode;
-    private final Integer collegeName;
-    private final Integer chairStartDate;
+    private final String id;
+    private final String name;
+    private final String office;
+    private final String phone;
+    private final String departmentName;
+    private final String departmentCode;
+    private final String collegeName;
+    private final String chairStartDate;
 }

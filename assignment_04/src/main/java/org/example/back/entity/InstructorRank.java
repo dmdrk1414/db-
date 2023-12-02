@@ -8,6 +8,6 @@ import lombok.*;
 @Builder
 @ToString
 public class InstructorRank {
-    private final Integer instructorId;
+    private final String instructorId;
     private final String rank;
 }

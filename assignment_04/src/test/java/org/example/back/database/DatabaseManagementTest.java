@@ -63,4 +63,11 @@ class DatabaseManagementTest {
 
         TestMethod.printFindAll(result);
     }
+
+    @Test
+    public void 분반_시간_findAll_기능() throws Exception {
+        List<SectionTime> result = databaseManagement.findAllSectionTime();
+
+        TestMethod.printFindAll(result);
+    }
 }

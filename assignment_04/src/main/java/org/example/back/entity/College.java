@@ -13,7 +13,7 @@ public class College {
 
     public String[] ofArray() {
 
-        String[] array = new String[2];
+        String[] array = new String[20];
         array[0] = this.name;
         array[1] = this.office;
 

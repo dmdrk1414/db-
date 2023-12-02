@@ -13,7 +13,7 @@ public class CollegePhone {
     private final String collegeName;
 
     public String[] ofArray() {
-        String[] array = new String[3];
+        String[] array = new String[20];
         array[0] = this.id;
         array[1] = this.phone;
         array[2] = this.collegeName;

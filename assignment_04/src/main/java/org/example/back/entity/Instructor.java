@@ -16,4 +16,19 @@ public class Instructor {
     private final String departmentCode;
     private final String collegeName;
     private final String chairStartDate;
+
+    public String[] ofArray() {
+
+        String[] array = new String[20];
+        array[0] = this.id;
+        array[1] = this.name;
+        array[2] = this.office;
+        array[3] = this.phone;
+        array[4] = this.departmentName;
+        array[5] = this.departmentCode;
+        array[6] = this.collegeName;
+        array[7] = this.chairStartDate;
+
+        return array;
+    }
 }

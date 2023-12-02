@@ -20,7 +20,7 @@ public class Demo extends JFrame {
         container.add(new InstructRankTableView());
         container.add(new InstructorTableView());
         container.add(new SectionTableView());
-//        container.add(new SectionTimeTableView());
+        container.add(new SectionTimeTableView());
 //        container.add(new CourseTableView());
 //        container.add(new DepartmentTableView());
 //        container.add(new StudentTableView());

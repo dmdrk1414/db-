@@ -82,7 +82,26 @@ public class Config {
                 .building(rows.get(9))
                 .build();
     }
-//    section_time;
 
-//    student;
+    //    section_time;
+    public static SectionTime getSectionTimeFromRowArray(List<String> rows) {
+        return SectionTime.builder()
+                .id(rows.get(0))
+                .time(rows.get(1))
+                .sectionId(rows.get(2))
+                .build();
+    }
+
+    //    student;
+    public static Student getStudentFromRowArray(List<String> rows) {
+        return Student.builder()
+                .id(rows.get(0))
+                .name(rows.get(1))
+                .address(rows.get(2))
+                .phone(rows.get(3))
+                .major(rows.get(4))
+                .departmentName(rows.get(5))
+                .departmentCode(rows.get(6))
+                .build();
+    }
 }

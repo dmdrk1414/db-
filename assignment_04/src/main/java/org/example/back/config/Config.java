@@ -1,9 +1,6 @@
 package org.example.back.config;
 
-import org.example.back.entity.College;
-import org.example.back.entity.CollegePhone;
-import org.example.back.entity.Department;
-import org.example.back.entity.Instructor;
+import org.example.back.entity.*;
 
 import java.util.List;
 
@@ -50,7 +47,12 @@ public class Config {
     }
 
     //    instructor_rank;
-
+    public static InstructorRank getInstructorRankFromRowArray(List<String> rows) {
+        return InstructorRank.builder()
+                .instructorId(rows.get(0))
+                .rank(rows.get(1))
+                .build();
+    }
 //    course;
 
 //    section;

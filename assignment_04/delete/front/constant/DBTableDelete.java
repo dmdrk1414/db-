@@ -1,14 +1,12 @@
 package org.example.delete.front.constant;
 
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
 
-public class DBTable {
+public class DBTableDelete {
     private Connection connection;
     private Statement statement;
 
-    public DBTable() {
+    public DBTableDelete() {
         try {
             // Oracle 드라이버 로드
             this.connection = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl", "C##assignment4", "1234");

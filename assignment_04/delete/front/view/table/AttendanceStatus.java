@@ -2,7 +2,7 @@ package org.example.delete.front.view.table;
 
 import org.example.delete.back.controller.DataBaseController;
 import org.example.delete.back.entity.Member;
-import org.example.delete.front.constant.DBTable;
+import org.example.delete.front.constant.DBTableDelete;
 import org.example.delete.front.inter.TableViewBasic;
 
 import javax.swing.*;
@@ -10,15 +10,15 @@ import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.util.List;
 
-public class MemberTableView extends JPanel implements TableViewBasic {
+public class AttendanceStatus extends JPanel implements TableViewBasic {
 
     private static final String MEMBER_TABLE = "member";
     private final String[] memberTableColumnNames;
     private final DefaultTableModel mainTable;
     private final JTable mamberTable;
 
-    public MemberTableView() {
-        memberTableColumnNames = new DBTable().get(MEMBER_TABLE);
+    public AttendanceStatus() {
+        memberTableColumnNames = new DBTableDelete().get(MEMBER_TABLE);
         mainTable = new DefaultTableModel(memberTableColumnNames, 0);
         mamberTable = new JTable(mainTable);
 

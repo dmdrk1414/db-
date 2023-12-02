@@ -1,10 +1,7 @@
 package org.example.back.database;
 
 import org.example.back.TestMethod;
-import org.example.back.entity.College;
-import org.example.back.entity.CollegePhone;
-import org.example.back.entity.Department;
-import org.example.back.entity.Instructor;
+import org.example.back.entity.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -42,6 +39,13 @@ class DatabaseManagementTest {
     @Test
     public void 교수님_findAll_기능() throws Exception {
         List<Instructor> result = databaseManagement.findAllInstructor();
+
+        TestMethod.printFindAll(result);
+    }
+
+    @Test
+    public void 교수님_직위_findAll_기능() throws Exception {
+        List<InstructorRank> result = databaseManagement.findAllInstructorRank();
 
         TestMethod.printFindAll(result);
     }

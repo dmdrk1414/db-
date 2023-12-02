@@ -16,6 +16,8 @@ public class CourseTableView extends JPanel {
 
     private static final String TABLE_NAME = TableStringConstant.TABLE_NAME_COURSE.getName(); // add 1. 원하는 테이블 선택
     private static final Integer JSCROLL_PANE_HIGHT = TableIntegerConstant.JSCROLL_PANE_HIGHT.getName();
+    private static final Integer JSCROLL_PANE_WIDTH = TableIntegerConstant.JSCROLL_PANE_WIDTH.getName();
+
     private final String[] tableColumnNames;
     private final DefaultTableModel mainTable;
     private final JTable table;
@@ -46,6 +48,9 @@ public class CourseTableView extends JPanel {
         // 스크롤
         // JScrollPane의 높이를 수정
         jScrollPane.setPreferredSize(new Dimension(jScrollPane.getPreferredSize().width, JSCROLL_PANE_HIGHT));
+
+        // JScrollPane의 넓이 수정
+        jScrollPane.setPreferredSize(new Dimension(JSCROLL_PANE_WIDTH, jScrollPane.getPreferredSize().height));
 
         creatTable();
     }

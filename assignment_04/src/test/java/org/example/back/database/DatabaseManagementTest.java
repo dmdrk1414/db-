@@ -3,6 +3,7 @@ package org.example.back.database;
 import org.example.back.TestMethod;
 import org.example.back.entity.College;
 import org.example.back.entity.CollegePhone;
+import org.example.back.entity.Department;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -26,6 +27,13 @@ class DatabaseManagementTest {
     @Test
     public void 단과대학_전화번호_테이블_findAll_기능() throws Exception {
         List<CollegePhone> result = databaseManagement.findAllCollegePhone();
+
+        TestMethod.printFindAll(result);
+    }
+
+    @Test
+    public void 학과_테이블_findAll_기능() throws Exception {
+        List<Department> result = databaseManagement.findALlDepartment();
 
         TestMethod.printFindAll(result);
     }

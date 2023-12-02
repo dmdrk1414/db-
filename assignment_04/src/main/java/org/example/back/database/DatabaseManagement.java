@@ -3,6 +3,7 @@ package org.example.back.database;
 import lombok.Getter;
 import org.example.back.entity.College;
 import org.example.back.entity.CollegePhone;
+import org.example.back.entity.Department;
 
 import java.sql.Connection;
 import java.sql.Statement;
@@ -25,5 +26,9 @@ public class DatabaseManagement {
 
     public List<CollegePhone> findAllCollegePhone() {
         return new DBCollegePhone(dbStatement, connection).findAll();
+    }
+
+    public List<Department> findALlDepartment() {
+        return new DBDepartment(dbStatement, connection).findAll();
     }
 }

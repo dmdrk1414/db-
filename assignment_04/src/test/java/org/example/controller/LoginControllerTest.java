@@ -1,8 +1,8 @@
 package org.example.controller;
 
-import org.example.back.controller.LoginController;
-import org.example.back.dto.request.LoginRequest;
-import org.example.back.dto.response.LoginResponse;
+import org.example.delete.back.controller.LoginController;
+import org.example.delete.back.dto.request.LoginRequest;
+import org.example.delete.back.dto.response.LoginResponse;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

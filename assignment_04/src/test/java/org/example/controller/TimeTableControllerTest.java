@@ -1,9 +1,9 @@
 package org.example.controller;
 
-import org.example.back.constant.ImageUrl;
-import org.example.back.controller.TimeTableController;
-import org.example.back.dto.request.DeleteTimeTableRequest;
-import org.example.back.dto.request.SaveTimeTableRequest;
+import org.example.delete.back.constant.ImageUrl;
+import org.example.delete.back.controller.TimeTableController;
+import org.example.delete.back.dto.request.DeleteTimeTableRequest;
+import org.example.delete.back.dto.request.SaveTimeTableRequest;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

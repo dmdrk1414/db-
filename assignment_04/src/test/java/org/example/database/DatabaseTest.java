@@ -1,7 +1,7 @@
 package org.example.database;
 
-import org.example.back.database.Database;
-import org.example.back.domain.Application;
+import org.example.delete.back.database.Database;
+import org.example.delete.back.domain.Application;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

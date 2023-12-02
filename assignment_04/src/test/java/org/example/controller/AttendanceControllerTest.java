@@ -1,7 +1,7 @@
 package org.example.controller;
 
-import org.example.back.controller.AttendanceController;
-import org.example.back.dto.request.AttendanceRequest;
+import org.example.delete.back.controller.AttendanceController;
+import org.example.delete.back.dto.request.AttendanceRequest;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;

@@ -7,10 +7,12 @@ import org.example.front.tableView.CourseTakeTableView;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
+import java.util.List;
 
 public class ApplyView extends JPanel {
-    JPanel applyCenterPanel1 = new JPanel();
-    JPanel applySouthPanel2 = new JPanel();
+    JPanel applyWestPanel1 = new JPanel();
+    JPanel applyCenterPanel2 = new JPanel();
+    JPanel deleteSouthFrame = new JPanel();
     CourseTakeTableView courseTakeTableView = new CourseTakeTableView();
 
     public ApplyView() {
@@ -20,11 +22,46 @@ public class ApplyView extends JPanel {
         setLayout(new BorderLayout());
 
         add(loginStateLabel, BorderLayout.NORTH);
-        add(applyCenterPanel1, BorderLayout.WEST);
-        add(applySouthPanel2, BorderLayout.CENTER);
+        add(applyWestPanel1, BorderLayout.WEST);
+        add(applyCenterPanel2, BorderLayout.CENTER);
         add(courseTakeTableView, BorderLayout.EAST);
+        add(deleteSouthFrame, BorderLayout.SOUTH);
 
         makeApplyView();
+        makeDeleteView();
+    }
+
+    private void makeDeleteView() {
+        JPanel deleteWest = new JPanel();
+        deleteSouthFrame.setLayout(new BorderLayout());
+
+        deleteSouthFrame.add(new JLabel("수강 삭제"), BorderLayout.NORTH);
+        deleteSouthFrame.add(deleteWest, BorderLayout.WEST);
+
+        JTextField idTextField = new JTextField("1", 5);
+        Button deleteButton = new Button("delete");
+        deleteWest.add(new JLabel("course_take id"));
+        deleteWest.add(idTextField);
+        deleteWest.add(deleteButton);
+
+        deleteButton.addActionListener(new AbstractAction() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Boolean isDelete = new DatabaseManagement().deleteCourseTakeById(idTextField.getText());
+                if (isDelete) {
+                    courseTakeTableView.initTable();
+
+                    List<CourseTake> allCourseTakes = new DatabaseManagement().findAllCourseTake();
+
+                    for (CourseTake courseTake : allCourseTakes) {
+                        String[] rowData = {courseTake.getId(), courseTake.getStudentId(), courseTake.getCourseName(), courseTake.getCourseCode(), courseTake.getSectionDevisionNumber()};
+                        courseTakeTableView.addDataToTable(rowData);
+                    }
+                }
+
+                idTextField.setText("");
+            }
+        });
     }
 
     private void makeApplyView() {
@@ -62,19 +99,19 @@ public class ApplyView extends JPanel {
         });
 
         // 센터
-        applyCenterPanel1.add(studentIdLabel);
-        applyCenterPanel1.add(studentIdTextField);
+        applyWestPanel1.add(studentIdLabel);
+        applyWestPanel1.add(studentIdTextField);
 
-        applyCenterPanel1.add(courseNameLabel);
-        applyCenterPanel1.add(courseNameTextField);
+        applyWestPanel1.add(courseNameLabel);
+        applyWestPanel1.add(courseNameTextField);
 
         // 남쪽
-        applySouthPanel2.add(courseCodeLabel);
-        applySouthPanel2.add(courseCodeTextField);
+        applyCenterPanel2.add(courseCodeLabel);
+        applyCenterPanel2.add(courseCodeTextField);
 
-        applySouthPanel2.add(divisionLabel);
-        applySouthPanel2.add(divisionTextField);
+        applyCenterPanel2.add(divisionLabel);
+        applyCenterPanel2.add(divisionTextField);
 
-        applySouthPanel2.add(applyButton);
+        applyCenterPanel2.add(applyButton);
     }
 }

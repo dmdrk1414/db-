@@ -53,7 +53,12 @@ public class CourseTakeTableView extends JPanel {
         creatTable();
     }
 
+    public void initTable() {
+        mainTable.setRowCount(0); // 기존 데이터 삭제
+    }
+
     public void creatTable() {
+
         String[] columRow;
         List<CourseTake> list = new DatabaseManagement().findAllCourseTake(); // add 4. 원하는 객체 선택
 

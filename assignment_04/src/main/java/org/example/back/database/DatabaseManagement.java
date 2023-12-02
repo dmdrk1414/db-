@@ -65,4 +65,8 @@ public class DatabaseManagement {
     public CourseTake findCourseTakeByStudentId(String studentId) {
         return new DBCourseTake(dbStatement, connection).findByStudentId(studentId);
     }
+
+    public Boolean deleteCourseTakeById(String id) {
+        return new DBCourseTake(dbStatement, connection).deleteById(id);
+    }
 }

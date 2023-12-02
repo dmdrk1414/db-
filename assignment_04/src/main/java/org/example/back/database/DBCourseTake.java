@@ -88,4 +88,24 @@ public class DBCourseTake {
 
         return courseTake;
     }
+
+    public Boolean deleteById(String id) {
+        String sql = "DELETE FROM course_take WHERE id = ?";
+
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+
+            preparedStatement.setString(1, id);
+
+            Integer affectedRows = preparedStatement.executeUpdate();
+
+            if (affectedRows > 0) {
+                return true;
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+        return false;
+    }
 }

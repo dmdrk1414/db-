@@ -10,5 +10,5 @@ import lombok.*;
 public class CollegePhone {
     private final String id;
     private final String phone;
-    private final String college_name;
+    private final String collegeName;
 }

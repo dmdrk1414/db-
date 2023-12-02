@@ -1,7 +1,5 @@
 package org.example.delete.back.controller;
 
-import org.example.back.entity.*;
-import org.example.back.service.*;
 import org.example.delete.back.entity.*;
 import org.example.delete.back.service.*;
 

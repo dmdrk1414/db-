@@ -1,10 +1,9 @@
 package org.example.delete.back.database;
 
 import lombok.Getter;
+import org.example.delete.back.domain.Application;
 import org.example.delete.back.dto.request.SavePostRequest;
 import org.example.delete.back.dto.request.SaveTimeTableRequest;
-import org.example.back.entity.*;
-import org.example.delete.back.domain.Application;
 import org.example.delete.back.entity.*;
 
 import java.sql.Connection;
@@ -17,8 +16,8 @@ public class Database {
     private final Connection connection;
 
     public Database() {
-        this.dbStatement = new DBConnection().getStatement();
-        this.connection = new DBConnection().getConnection();
+        this.dbStatement = new DBConnectionDelete().getStatement();
+        this.connection = new DBConnectionDelete().getConnection();
     }
 
     public List<AttendanceStatus> findAllAttendanceStatus() {

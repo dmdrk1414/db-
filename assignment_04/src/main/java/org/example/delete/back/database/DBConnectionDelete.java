@@ -2,10 +2,13 @@ package org.example.delete.back.database;
 
 import lombok.Getter;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 @Getter
-public class DBConnection {
+public class DBConnectionDelete {
     // 데이터베이스 연결을 위한 클래스
     private static final String ORACLE_JDBC_URL = "jdbc:oracle:thin:@localhost:1521:orcl";
     private static final String ORACLE_DATABASE_ID = "C##assignment4";
@@ -14,7 +17,7 @@ public class DBConnection {
     private Connection connection;
 
     // DBConnectionTest 생성자
-    public DBConnection() {
+    public DBConnectionDelete() {
         try {
             // Oracle 드라이버 로드
             Class.forName("oracle.jdbc.OracleDriver");

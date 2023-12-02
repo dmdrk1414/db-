@@ -8,6 +8,8 @@ import java.awt.*;
 
 public class Demo extends JFrame {
     private static final Integer MARGIN_WIDTH_VGAP = 10;
+    ImageIcon imageIcon = new ImageIcon(getClass().getResource("/seungchan20161822.png"));
+    JLabel label = new JLabel(imageIcon);
 
     public Demo() {
         setTitle("데이터베이스");
@@ -25,9 +27,10 @@ public class Demo extends JFrame {
         container.add(new SectionTimeTableView());
         container.add(new CourseTableView());
         container.add(new StudentTableView());
+        container.add(label);
         container.add(new ApplyView());
 
-        setSize(1500, 800);
+        setSize(1500, 1000);
         setVisible(true);
     }
 

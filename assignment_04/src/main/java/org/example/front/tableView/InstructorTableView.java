@@ -13,7 +13,7 @@ import java.util.List;
 public class InstructorTableView extends JPanel {
 
     private static final String TABLE_NAME = "instructor"; // add 1. 원하는 테이블 선택
-    private static final Integer JSCROLL_PANE_HIGHT = 150;
+    private static final Integer JSCROLL_PANE_HIGHT = 120;
     private final String[] tableColumnNames;
     private final DefaultTableModel mainTable;
     private final JTable table;

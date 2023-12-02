@@ -19,6 +19,7 @@ public class Demo extends JFrame {
         container.setLayout(new FlowLayout(FlowLayout.LEFT, MARGIN_WIDTH_VGAP, MARGIN_WIDTH_VGAP));
         container.add(new CollegeTableView());
         container.add(new CollegePhoneTableView());
+        container.add(new CollegePhoneTableView());
         container.add(new InstructorTableView());
 
         setSize(1500, 800);

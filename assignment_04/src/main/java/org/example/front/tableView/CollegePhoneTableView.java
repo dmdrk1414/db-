@@ -13,7 +13,7 @@ import java.util.List;
 public class CollegePhoneTableView extends JPanel {
 
     private static final String TABLE_NAME = "college_phone"; // add 1. 원하는 테이블 선택
-    private static final Integer JSCROLL_PANE_HIGHT = 150; // add 2. 스크롤 펜 높이 조정
+    private static final Integer JSCROLL_PANE_HIGHT = 120; // add 2. 스크롤 펜 높이 조정
     private final String[] tableColumnNames;
     private final DefaultTableModel mainTable;
     private final JTable table;

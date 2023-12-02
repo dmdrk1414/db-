@@ -13,7 +13,7 @@ import java.util.List;
 public class CollegeTableView extends JPanel {
 
     private static final String TABLE_NAME = "college"; // add 1. 원하는 테이블 선택
-    private static final Integer JSCROLL_PANE_HIGHT = 150;
+    private static final Integer JSCROLL_PANE_HIGHT = 120;
     private final String[] tableColumnNames;
     private final DefaultTableModel mainTable;
     private final JTable table;
@@ -31,7 +31,7 @@ public class CollegeTableView extends JPanel {
 
         // 테이블 크기
         table.setRowHeight(20);
-        table.getColumnModel().getColumn(1).setPreferredWidth(220); // add 3. 원하는 컬럼의 넓이 
+        table.getColumnModel().getColumn(1).setPreferredWidth(220); // add 3. 원하는 컬럼의 넓이
 
         // 라벨 글자 크기
         int fontSize = 20;

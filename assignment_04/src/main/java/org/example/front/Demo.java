@@ -1,9 +1,6 @@
 package org.example.front;
 
-import org.example.front.tableView.CollegePhoneTableView;
-import org.example.front.tableView.CollegeTableView;
-import org.example.front.tableView.InstructRankTableView;
-import org.example.front.tableView.InstructorTableView;
+import org.example.front.tableView.*;
 
 import javax.swing.*;
 import java.awt.*;
@@ -22,6 +19,11 @@ public class Demo extends JFrame {
         container.add(new CollegePhoneTableView());
         container.add(new InstructRankTableView());
         container.add(new InstructorTableView());
+        container.add(new SectionTableView());
+//        container.add(new SectionTimeTableView());
+//        container.add(new CourseTableView());
+//        container.add(new DepartmentTableView());
+//        container.add(new StudentTableView());
 
         setSize(1500, 800);
         setVisible(true);

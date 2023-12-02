@@ -49,4 +49,8 @@ public class DatabaseManagement {
     public List<SectionTime> findAllSectionTime() {
         return new DESectionTime(dbStatement, connection).findAll();
     }
+
+    public List<Student> findAllStudent() {
+        return new DBStudent(dbStatement, connection).findAll();
+    }
 }

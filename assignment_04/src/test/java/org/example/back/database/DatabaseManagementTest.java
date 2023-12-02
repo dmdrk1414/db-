@@ -70,4 +70,11 @@ class DatabaseManagementTest {
 
         TestMethod.printFindAll(result);
     }
+
+    @Test
+    public void 학생_findAll_기능() throws Exception {
+        List<Student> result = databaseManagement.findAllStudent();
+
+        TestMethod.printFindAll(result);
+    }
 }

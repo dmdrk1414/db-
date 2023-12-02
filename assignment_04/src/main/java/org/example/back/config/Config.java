@@ -53,8 +53,19 @@ public class Config {
                 .rank(rows.get(1))
                 .build();
     }
-//    course;
 
+    //    course;
+    public static Course getCourceFromRowArray(List<String> rows) {
+        return Course.builder()
+                .code(rows.get(0))
+                .name(rows.get(1))
+                .credits(rows.get(2))
+                .courseLevel(rows.get(3))
+                .description(rows.get(4))
+                .departmentName(rows.get(5))
+                .departmentCode(rows.get(6))
+                .build();
+    }
 //    section;
 
 //    section_time;
